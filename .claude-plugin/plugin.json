@@ -1,6 +1,9 @@
 {
   "name": "lilmgenius-skills",
+  "description": "The agent skills I actually use, shared so you can too.",
   "skills": [
-    "./skills/productivity/re0"
+    "./skills/productivity/re0",
+    "./skills/productivity/ssotchk",
+    "./skills/productivity/ssotize"
   ]
 }

@@ -1,11 +1,30 @@
 {
   "name": "lilmgenius-skills",
-  "version": "0.1.0",
-  "private": true,
-  "description": "LilMGenius agent skills for repeatable work with agents",
+  "version": "0.2.0",
+  "description": "The agent skills I actually use, shared so you can too.",
+  "keywords": [
+    "agent-skills",
+    "claude",
+    "claude-code",
+    "ai-agents",
+    "skills",
+    "workflows",
+    "ssot",
+    "re0",
+    "productivity"
+  ],
+  "author": "LilMGenius (https://github.com/LilMGenius)",
+  "homepage": "https://github.com/LilMGenius/skills#readme",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/LilMGenius/skills"
   },
-  "license": "MIT"
+  "files": [
+    "skills",
+    "docs",
+    "scripts",
+    "CLAUDE.md",
+    "NOTICE"
+  ]
 }
