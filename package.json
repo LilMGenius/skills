@@ -1,6 +1,6 @@
 {
   "name": "lilmgenius-skills",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "The agent skills I actually use, shared so you can too.",
   "keywords": [
     "agent-skills",
@@ -16,6 +16,7 @@
     "openclaw",
     "pi",
     "refactor",
+    "git",
     "single-source-of-truth",
     "ssot",
     "verification",

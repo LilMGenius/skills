@@ -3,6 +3,7 @@
   "description": "The agent skills I actually use, shared so you can too.",
   "skills": [
     "./skills/single/re0",
+    "./skills/single/re0-git",
     "./skills/single/shower",
     "./skills/single/tasting",
     "./skills/cross/ssotchk",

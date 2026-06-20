@@ -23,6 +23,7 @@ A reminder buried in docs ("remember to verify") won't reliably fire in a fresh 
 - Use the skills; don't re-implement them (`shower` for clarity, `ssotchk`/`ssotize` for SSOT, `re0` for cleanup).
 - Skip what plainly doesn't apply (a one-line config change may need only `ssotchk`), but say what you skipped and why.
 - Findings flow back to the author session to fix — `tasting` routes, it doesn't replace the fixing skills.
+- Stop at the artifact — `tasting` never touches git or makes commits. Cleaning a commit's message is a separate, user-invoked step (`re0-git`), and `tasting` must not chain to it.
 
 ## Verification
 
