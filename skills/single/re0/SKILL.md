@@ -1,6 +1,6 @@
 ---
 name: re0
-description: "Refresh an existing artifact into the current best v0. Use when the user asks to clean up, sync up, dedupe, de-noise, rewrite, or update an artifact after iteration; when nearby docs, metadata, plans, drafts, or generated outputs may have drifted; or when changes in one place should be reflected across related artifacts while keeping the result minimal."
+description: "Refresh an existing artifact into the current best v0. Use when the user asks to clean up, sync up, dedupe, de-noise, rewrite, or update an artifact after iteration; when nearby artifacts may have drifted; or when changes in one place should be reflected across related artifacts while keeping the result minimal."
 ---
 
 Refresh the target artifact as if it were the first clean version.
@@ -27,6 +27,7 @@ should not read like a changelog, cleanup note, or patch over an older draft.
 
 ## Rules
 
+- A pass that finds nothing to genuinely improve changes nothing.
 - Prefer editing existing sections over adding new ones.
 - Convert "what changed" into "what is true now".
 - Keep only details that improve future execution, accuracy, or recall.

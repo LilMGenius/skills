@@ -1,10 +1,10 @@
 <div align="center">
 
-# Skills For Fake Engineers
+# PaperThin
 
-**The agent skills I actually use, shared so you can too.**
+<img src="https://raw.githubusercontent.com/LilMGenius/paperthin/main/assets/banner.svg" alt="PaperThin — Trust the artifact, not the author." width="820">
 
-Plain-Markdown skills that turn old engineering wisdom into reflexes your agent reaches for on its own — on **any** agent: Claude Code, Codex, Cursor, Antigravity, Grok-Build, Hermes, OpenClaw, Pi, etc.
+Plain-Markdown skills that turn old engineering wisdom into reflexes your agent reaches for on its own — on any agent: Claude Code, Codex, Cursor, Antigravity, Grok-Build, Hermes, OpenClaw, Pi, etc.
 
 [Quickstart](#quickstart-15-seconds) · [Reference](#reference) · [The Problem](#the-problem) · [The Fixes](#the-fixes) · [Credits](#credits)
 
@@ -16,7 +16,7 @@ Plain-Markdown skills that turn old engineering wisdom into reflexes your agent 
 
 1. **Install** for every agent you use:
    ```bash
-   npx skills@latest add LilMGenius/skills --global --agent '*'
+   npx skills@latest add LilMGenius/paperthin --global --agent '*'
    ```
 2. **Run it elevated** so the skills are symlinked (they auto-update), not copied.
 3. **Use them** — model-invoked, so your agent reaches for them on its own; or call one by name, like `/re0`.
@@ -73,7 +73,7 @@ Edit a doc one piece at a time across a session and it bloats: stale deltas, dup
 <summary><b>[PROOF]</b></summary>
 
 - **Setup** — we asked `re0` to refresh these docs once more, but they were already at v0.
-- **Result** — it changed a single commit date and left every line of prose untouched.
+- **Result** — it found nothing to improve and left every line of prose untouched.
 - **So** — a tool that does nothing when nothing is wrong never bloats your repo: these skills remove noise, they never add it.
 </details>
 

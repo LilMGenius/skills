@@ -1,22 +1,26 @@
-# LilMGenius Skills
+# PaperThin
 
-The authoring guide for these skills — itself a skill artifact, so `re0` it when it drifts. Live catalog: [README](./README.md).
+The guide for authoring these skills — and itself a skill artifact, so `re0` it when it drifts. The shipped catalog is [README](./README.md).
 
 ## Philosophy
 
-**Composable, single-responsibility skills that sharpen the work — including this repo itself.** Every skill is general enough to use *while building the skills*, so authoring is **recursive and self-improving**: we maintain the skills with the skills. Treat that loop as the point.
+- **Trust the artifact, not the author.** A skill exists to make work read true to someone who wasn't there. The maker's in-session mind is the worst judge of whether it does — so a skill either re-derives the work from what's true now, or imports outside eyes to test it.
+- **Single source of truth.** One fact lives in one place; everything else references it by name. Skills compose by naming each other in prose — never by copying content or reaching into another skill's files. Shared material lives in its owning skill; others point to it.
+- **Restraint.** Change only what genuinely improves — a pass that finds nothing to improve changes nothing. The enemy is slop (noise, duplication, padding), not addition.
+- **Recursive.** Every skill is general enough to use *while building the skills*, so we maintain the skills with the skills, and each pass is audited and refined by the tools it ships. Treat that loop as the point.
 
-**Single Source of Truth.** One fact lives in exactly one place; everything else references it by name. Skills invoke each other in prose, never by copying content or reaching into another skill's files.
-
-**Two vectors.** `re0` works depth-first (one artifact → clean v0); `ssotchk`/`ssotize` work breadth-first (one truth across many). Establish order with SSOT, then keep it with `re0` rather than re-consolidating.
-
-## Repository layout
+## Layout
 
 ```
 skills/<perspective>/<name>/SKILL.md
 ```
 
-Organize by **artifact perspective**, not topic: `single/` works on the one artifact in hand (`re0`, `re0-git`, `shower`, `tasting`); `cross/` reconciles one truth across many (`ssotchk`, `ssotize`). Topic domains belong in *separate plugins*, so the only durable cut within a plugin is artifact perspective — add a bucket only when the reason is clear and durable. One skill = one directory with a `SKILL.md`; keep drafts and retired skills out of the README and `plugin.json`.
+Group by **artifact perspective** — which is the suite's two vectors made physical:
+
+- `single/` — **depth**: refine or verify the one artifact in hand (`re0`, `re0-git`, `shower`, `tasting`).
+- `cross/` — **breadth**: reconcile one truth across many artifacts and platforms (`ssotchk`, `ssotize`).
+
+Reach for `cross/` to *establish* order (legacy refactor, knowledge-base build, fresh scaffolding); once a fact is cleanly SSOT'd, *maintain* it with `re0` rather than re-consolidating. Topic domains belong in separate plugins, so within a plugin the only durable cut is perspective. One skill = one directory with a `SKILL.md`; keep drafts and retired skills out of the README and `plugin.json`.
 
 ## SKILL.md format
 
@@ -30,30 +34,28 @@ description: "<trigger-rich one-liner>"
 
 ## Goal
 ## Workflow      — numbered steps
-## Rules         — constraints / what not to do
+## Rules         — constraints
 ## Verification  — checks before finishing; report what changed
 ```
 
 ## Invocation
 
-Every `SKILL.md` is either user-invoked (`disable-model-invocation: true`, reachable only by the human) or model-invoked (model- or user-reachable). For the taxonomy, description conventions, and why a user-invoked skill can invoke model-invoked skills but never another user-invoked one, see [docs/invocation.md](./docs/invocation.md). *(vendored verbatim; see Vendoring & lineage)*
+Every `SKILL.md` is either user-invoked (`disable-model-invocation: true`, reachable only by the human) or model-invoked (model- or user-reachable). For the full definitions, description conventions, and why a user-invoked skill can invoke model-invoked skills but never another user-invoked one, see [docs/invocation.md](./docs/invocation.md).
 
-**The dividing line.** Default to **model-invoked**. Make a skill **user-invoked** only when the model should *never* reach it on its own — its trigger or effect is a deliberate, human-decided action (committing, pushing, publishing, deploying), or having it in reach would bias the agent toward one. Such a skill can't be composed, so it also stays out of `tasting`. Today only `re0-git` qualifies (it cleans a *commit's* message — committing is human-decided); everything else is model-invoked and composable.
+Default to model-invoked. Make a skill user-invoked only when the model should never reach it on its own — its trigger is a deliberate, human-decided action (commit, push, publish, deploy), or its mere presence in reach would bias the agent toward one. A user-invoked skill can't be composed, so it also stays out of `tasting`. Today only `re0-git` qualifies: it cleans a commit's message, and committing is human-decided.
 
-## Shipping a change
+## Shipping
 
 Before committing:
 
-1. **SKILL.md** — new/changed skill follows the format above.
-2. **README.md** — list every active skill, grouped into Model-invoked and User-invoked, each linked to its `SKILL.md`.
-3. **.claude-plugin/plugin.json** — register each active skill's path.
-4. **package.json** — bump version (new skill = minor; fix/docs/refactor = patch); keep `keywords` grouped logically (identity → agents → capabilities).
-5. **tasting** — run it (`shower` + `ssotchk` + `re0`) before finalizing.
+1. **SKILL.md** follows the anatomy above.
+2. **README** lists it — grouped Model-/User-invoked, each linked to its `SKILL.md`.
+3. **plugin.json** registers its path.
+4. **package.json** bumps version (new skill = minor; fix/docs = patch); `keywords` stay grouped logically.
+5. Run **`tasting`** — `shower` the artifact, `ssotchk` the repo, `re0` the docs.
 
-Commit messages: Conventional Commits, one bullet per real change — no padding, no mechanical trivia (version bumps, file registration), no co-author tags. `re0-git` restores a drifted message to this.
+Commit messages: Conventional Commits, one bullet per real change — no padding, no mechanical trivia, no co-author tags. `re0-git` cleans a drifted message back to its essence, in the author's own style.
 
-## Vendoring & lineage
+## Vendoring
 
-Not a fork of [mattpocock/skills](https://github.com/mattpocock/skills) — we adopt its architecture and philosophy and ship our own non-overlapping workflows, vendoring only the small shared substrate so the repo stays *our skills plus clearly-credited building blocks*.
-
-Reused material stays **verbatim**, credited in [NOTICE](./NOTICE) **per source** (project + license + copyright), not per file — never paraphrase to drop credit. Add a source block there the first time you vendor from a source; later material needs none.
+Not a fork of [mattpocock/skills](https://github.com/mattpocock/skills) — we adopt its architecture and philosophy and ship our own non-overlapping workflows, vendoring only the small shared substrate. Reused material stays **verbatim** and is credited in [NOTICE](./NOTICE) per source (project · license · copyright), never paraphrased to drop credit.

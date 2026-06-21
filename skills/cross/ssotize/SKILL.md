@@ -1,6 +1,6 @@
 ---
 name: ssotize
-description: "Consolidate a fact that's scattered across places into one canonical source and replace the rest with references — mutating. Use when the user asks to deduplicate, consolidate, unify, or establish a single source of truth across artifacts or platforms (files, docs, Notion, Slack, Jira, GitHub); or when the same fact lives in many places and copies are drifting. Folds unique details into the canonical home and reconciles contradictions before removing any copy."
+description: "Consolidate a fact that's scattered across places into one canonical source and replace the rest with references — mutating. Use when the user asks to deduplicate, consolidate, unify, or establish a single source of truth across artifacts or platforms; or when the same fact lives in many places and copies are drifting. Folds unique details into the canonical home and reconciles contradictions before removing any copy."
 ---
 
 Collapse a scattered truth into one canonical home; make every other place point to it.
@@ -22,11 +22,12 @@ Use this to **establish or repair** SSOT — messy, legacy, or freshly-scaffolde
 
 ## Rules
 
+- A pass that finds no scatter to consolidate changes nothing.
 - Fold before you cut — never delete the only place a detail exists.
 - One canonical home per fact; prefer a reference over a copy everywhere else.
 - Reconcile, don't duplicate, contradictions — resolve the conflicting value in one place, never preserve it in two.
 - Don't consolidate across a trust/permission boundary (private → public, customer-facing → internal) without explicit confirmation.
-- Be platform-aware: transclude where possible (Notion), else link to a stable anchor (GitHub permalink, Jira/Slack/Notion deep link); never replace a copy with a link the reader can't follow.
+- Be platform-aware: transclude where possible, else link to a stable anchor; never replace a copy with a link the reader can't follow.
 - Keep it reversible: prefer a reference over a hard deletion when a platform can't link back.
 
 ## Verification

@@ -1,39 +1,31 @@
 {
-  "name": "lilmgenius-skills",
-  "version": "0.4.0",
-  "description": "The agent skills I actually use, shared so you can too.",
+  "name": "paperthin",
+  "version": "0.5.0",
+  "description": "Plain-Markdown skills that turn old engineering wisdom into reflexes your agent reaches for on its own — on any agent.",
   "keywords": [
     "agent-skills",
     "agent-agnostic",
     "ai-agents",
-    "productivity",
-    "antigravity",
-    "claude-code",
-    "codex",
-    "cursor",
-    "grok-build",
-    "hermes",
-    "openclaw",
-    "pi",
-    "refactor",
-    "git",
+    "anti-slop",
     "single-source-of-truth",
     "ssot",
+    "self-improvement",
+    "refactor",
+    "dedupe",
+    "clean-code",
     "verification",
-    "self-improvement"
+    "documentation",
+    "knowledge-base",
+    "git"
   ],
   "author": "LilMGenius (https://github.com/LilMGenius)",
-  "homepage": "https://github.com/LilMGenius/skills#readme",
   "license": "MIT",
+  "homepage": "https://github.com/LilMGenius/paperthin#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LilMGenius/skills"
+    "url": "git+https://github.com/LilMGenius/paperthin.git"
   },
-  "files": [
-    "skills",
-    "docs",
-    "scripts",
-    "CLAUDE.md",
-    "NOTICE"
-  ]
+  "bugs": {
+    "url": "https://github.com/LilMGenius/paperthin/issues"
+  }
 }

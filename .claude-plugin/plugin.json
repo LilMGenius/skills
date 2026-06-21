@@ -1,6 +1,6 @@
 {
-  "name": "lilmgenius-skills",
-  "description": "The agent skills I actually use, shared so you can too.",
+  "name": "paperthin",
+  "description": "Plain-Markdown skills that turn old engineering wisdom into reflexes your agent reaches for on its own — on any agent.",
   "skills": [
     "./skills/single/re0",
     "./skills/single/re0-git",

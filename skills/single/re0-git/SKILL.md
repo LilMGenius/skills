@@ -16,7 +16,7 @@ It is **user-invoked** — you run it once you've decided to commit. Deliberatel
 
 1. Scope the target — usually `HEAD`, sometimes a short unpushed range. A commit must already exist; re0-git never creates one.
 2. Read two things: what actually changed (`git show --stat`, `git diff`) so the message is true, and the author's recent `git log` so you match how they write — a one-line head, or a subject with bullets, terse or prose, whatever it is.
-3. Rewrite the message in that style, keeping only what carries the change for a handoff. Cut the rest: stale or half-true lines, restated context, and mechanical or derivable trivia (version bumps, file registration, "also updated X"). One point per real change — never pad to a length.
+3. Rewrite the message in that style, keeping only what carries the change for a handoff. Cut the rest: stale or half-true lines, context or principles already documented elsewhere, and mechanical or derivable trivia (version bumps, file registration, platform or scope enumerations, "also updated X"). One point per real change — fold a minor change into a related point instead of giving it its own line; never pad to a length.
 4. Re-commit signed, with dates per the rule below: for the tip you're finalizing (`HEAD`), a plain `git commit --amend -S` lets both dates default to now; to keep an older commit's dates, rebuild it with `GIT_AUTHOR_DATE`/`GIT_COMMITTER_DATE git commit-tree <tree> -p <parent> -S` and move the branch ref. For a range, the tip restamps and the rest preserve.
 5. Verify and report.
 
